@@ -1,90 +1,66 @@
-:root{
-	/* COLORS: */
-	--light-green: #7ed56f;
-	--medium-green: #55c57a;
-	--dark-green: #28b485;
-	--trans-light-green: #7ed56fd0;
-	--trans-medium-green: #55c57ad0;
-	--trans-dark-green: #28b485d0;
-	--text-default: #777777;
-}
-
 *,
 *::after,
-*::before{
-	margin:0;
-	padding:0;
-	box-sizing: inherit;
-}
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit; }
 
-html{
-	font-size: 62.5%;
-}
+html {
+	font-size: 62.5%; }
 
-body{
+body {
 	font-family: "Lato";
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.7;
-	color: var(--text-default);
-	box-sizing: border-box;
-}
+	color: #777777;
+	box-sizing: border-box; }
 
-.header{
-	height:95vh;
-	background-image: linear-gradient(to right bottom, var(--trans-light-green), var(--trans-dark-green)), url(../img/hero.jpg);
+.header {
+	height: 95vh;
+	background-image: linear-gradient(to right bottom, #7ed56fd0, #28b485d0), url(../img/hero.jpg);
 	background-size: cover;
 	background-position: top;
 	position: relative;
-	clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-}
+	clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
 
-.header__logo-box{
+.header__logo-box {
 	position: absolute;
 	top: 4rem;
-	left: 4rem;
-}
+	left: 4rem; }
 
-.header__logo{
-	height: 3.5rem;
-}
+.header__logo {
+	height: 3.5rem; }
 
-.text-box{
+.text-box {
 	position: absolute;
 	top: 40%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	text-align: center;
-}
+	text-align: center; }
 
-.heading-primary{
+.heading-primary {
 	color: #ffffff;
 	text-transform: uppercase;
 	margin-bottom: 6rem;
+	backface-visibility: hidden; }
 
-	backface-visibility: hidden;
-}
-
-.heading-primary--main{
+.heading-primary--main {
 	display: block;
 	font-size: 6rem;
 	font-weight: 600;
 	letter-spacing: 3.5rem;
+	animation: moveinLeft 1s ease-out; }
 
-	animation: moveinLeft 1s ease-out;
-}
-
-.heading-primary--sub{
+.heading-primary--sub {
 	display: block;
 	font-size: 2rem;
 	font-weight: 900;
 	letter-spacing: 1.74rem;
-
-	animation: moveinRight 1s ease-out;
-}
+	animation: moveinRight 1s ease-out; }
 
 .btn:link,
-.btn:visited{
+.btn:visited {
 	text-transform: uppercase;
 	text-decoration: none;
 	padding: 1.5rem 4rem;
@@ -92,30 +68,25 @@ body{
 	border-radius: 10rem;
 	transition: all .2s;
 	position: relative;
-	font-size: 1.6rem;
-}
+	font-size: 1.6rem; }
 
-.btn:hover{
+.btn:hover {
 	transform: translateY(-0.3rem);
-	box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
-}
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
-.btn:active{
+.btn:active {
 	transform: translateY(-0.1rem);
-	box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
-}
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.btn--white{
+.btn--white {
 	background: #ffffff;
-	color: var(--text-default);
-}
+	color: #777777; }
 
-.btn--animated{
+.btn--animated {
 	animation: moveinUp 1s ease-out 0.75s;
-	animation-fill-mode: backwards;
-}
+	animation-fill-mode: backwards; }
 
-.btn::after{
+.btn::after {
 	content: "";
 	display: inline-block;
 	height: 100%;
@@ -125,65 +96,44 @@ body{
 	top: 0;
 	left: 0;
 	z-index: -1;
-	transition: all 0.4s;
-}
+	transition: all 0.4s; }
 
-.btn--white::after{
-	background-color: #ffffff;
-}
+.btn--white::after {
+	background-color: #ffffff; }
 
-.btn:hover::after{
+.btn:hover::after {
 	transform: scaleX(1.4) scaleY(1.6);
-	opacity: 0;
-}
+	opacity: 0; }
 
-@keyframes moveinLeft{
-	0%{
+@keyframes moveinLeft {
+	0% {
 		opacity: 0;
-		transform: translateX(-10rem);
-	}
-
-	80%{
+		transform: translateX(-10rem); }
+	80% {
 		opacity: 0.8;
-		transform: translateX(1rem)
-	}
-
-	100%{
+		transform: translateX(1rem); }
+	100% {
 		opacity: 1;
-		transform: translateX(0)
-	}
-}
+		transform: translateX(0); } }
 
-@keyframes moveinRight{
-	0%{
+@keyframes moveinRight {
+	0% {
 		opacity: 0;
-		transform: translateX(+10rem);
-	}
-
-	80%{
+		transform: translateX(10rem); }
+	80% {
 		opacity: 0.8;
-		transform: translateX(-1rem)
-	}
-
-	100%{
+		transform: translateX(-1rem); }
+	100% {
 		opacity: 1;
-		transform: translateX(0)
-	}
-}
+		transform: translateX(0); } }
 
-@keyframes moveinUp{
-	0%{
+@keyframes moveinUp {
+	0% {
 		opacity: 0;
-		transform: translateY(3rem);
-	}
-
-	80%{
+		transform: translateY(3rem); }
+	80% {
 		opacity: 0.8;
-		transform: translateY(-1rem)
-	}
-
-	100%{
+		transform: translateY(-1rem); }
+	100% {
 		opacity: 1;
-		transform: translateY(0)
-	}
-}
+		transform: translateY(0); } }
