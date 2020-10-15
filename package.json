@@ -1,0 +1,22 @@
+{
+  "name": "nature-tours",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/z3t4z00k/Nature-Tours.git"
+  },
+  "author": "z3t4z00k",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/z3t4z00k/Nature-Tours/issues"
+  },
+  "homepage": "https://github.com/z3t4z00k/Nature-Tours#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
