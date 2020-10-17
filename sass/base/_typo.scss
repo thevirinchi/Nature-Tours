@@ -50,3 +50,17 @@ body{
 		text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
 	}
 }
+
+.heading-tertiary{
+	font-size: $text-default-size;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.paragraph{
+	font-size: $text-default-size;
+	
+	&:not(:last-child){
+		margin-bottom: 3rem;
+	}
+}
