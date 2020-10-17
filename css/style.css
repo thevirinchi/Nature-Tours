@@ -173,6 +173,32 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translateY(0); }
 
+.composition {
+  position: relative; }
+  .composition__image {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    position: absolute;
+    transition: all 0.3s;
+    z-index: 10;
+    outline-offset: 1rem; }
+    .composition__image--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__image--p2 {
+      right: 0;
+      top: 4rem; }
+    .composition__image--p3 {
+      left: 20%;
+      top: 15rem; }
+    .composition__image:hover {
+      outline: 0.5rem solid #55c57a;
+      transform: scale(1.4) translateY(-0.5rem);
+      z-index: 20;
+      box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.4); }
+  .composition:hover .composition__image:not(:hover) {
+    transform: scale(0.9); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
