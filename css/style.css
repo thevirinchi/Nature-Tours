@@ -173,6 +173,36 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translateY(0); }
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem; }
+  .card__side {
+    height: 50rem;
+    transition: all 0.8s ease-out;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden; }
+    .card__side--front {
+      background-color: #ededed; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card:hover .card__side--front {
+    transform: rotateY(180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0deg); }
+
 .composition {
   position: relative; }
   .composition__image {
@@ -280,3 +310,8 @@ body {
   margin-top: -12rem; }
   .section-features > * {
     transform: skewY(7deg); }
+
+.section-tours {
+  padding: 25rem 0 50rem 0;
+  margin-top: -10vh;
+  background-color: #f7f7f7; }
