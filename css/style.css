@@ -110,6 +110,15 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-top-sma {
+  margin-top: 1.5rem; }
+
+.u-margin-top-med {
+  margin-top: 2rem; }
+
+.u-margin-top-big {
+  margin-top: 8rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -136,6 +145,12 @@ body {
   color: #777777; }
   .btn--white::after {
     background-color: #ffffff; }
+
+.btn--green {
+  background: #28b485;
+  color: #ededed; }
+  .btn--green::after {
+    background-color: #28b485; }
 
 .btn--animated {
   animation: moveinUp 1s ease-out 0.75s;
@@ -177,9 +192,9 @@ body {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 50rem; }
+  height: 52rem; }
   .card__side {
-    height: 50rem;
+    height: 52rem;
     transition: all 0.8s ease-out;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 1rem;
@@ -187,7 +202,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    overflow: hidden; }
     .card__side--front {
       background-color: #ededed; }
     .card__side--back {
@@ -199,9 +215,70 @@ body {
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
   .card:hover .card__side--front {
-    transform: rotateY(180deg); }
+    transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; }
+    .card__picture-1 {
+      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+    .card__picture-2 {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../img/nat-6.jpg); }
+    .card__picture-3 {
+      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); }
+  .card__heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ededed;
+    position: absolute;
+    top: 15rem;
+    right: 2rem;
+    text-align: right;
+    width: 64%; }
+  .card__heading-span {
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; }
+    .card__heading-span-1 {
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+    .card__heading-span-2 {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85)); }
+    .card__heading-span-3 {
+      background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
+  .card__details {
+    padding: 3rem; }
+    .card__details-ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto; }
+      .card__details-ul li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem; }
+        .card__details-ul li:not(:last-child) {
+          border-bottom: 0.1rem solid #dfdfdf; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .card__price-box {
+    text-align: center;
+    color: #ededed; }
+  .card__price-only {
+    font-size: 1.5rem;
+    text-transform: uppercase; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 300;
+    margin-bottom: 8rem; }
 
 .composition {
   position: relative; }
@@ -283,6 +360,7 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
   .header__logo-box {
     position: absolute;
@@ -304,7 +382,7 @@ body {
 
 .section-features {
   padding: 20rem 0;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../../img/nat-4.jpg);
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-4.jpg);
   background-size: cover;
   transform: skewY(-6deg);
   margin-top: -12rem; }
@@ -312,6 +390,6 @@ body {
     transform: skewY(7deg); }
 
 .section-tours {
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 15rem 0;
   margin-top: -10vh;
   background-color: #f7f7f7; }
