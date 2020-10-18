@@ -2,10 +2,10 @@
 	perspective: 150rem;
 	-moz-perspective: 150rem;
 	position: relative;
-	height: 50rem;
+	height: 52rem;
 
 	&__side{
-		height: 50rem;
+		height: 52rem;
 		transition: all 0.8s ease-out;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
 		border-radius: 1rem;
@@ -14,6 +14,7 @@
 		left:0;
 		width: 100%;
 		backface-visibility: hidden;
+		overflow: hidden;
 
 		&--front{
 			background-color: $color-l-white;
@@ -37,10 +38,105 @@
 	}
 
 	&:hover &__side--front{
-		transform: rotateY(180deg);
+		transform: rotateY(-180deg);
 	}
 
 	&:hover &__side--back{
 		transform: rotateY(0deg);
+	}
+
+	&__picture{
+		background-size: cover;
+		height: 23rem;
+		background-blend-mode: screen;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		border-top-left-radius: 1rem;
+		border-top-right-radius: 1rem;
+
+		&-1{
+			background-image: linear-gradient(to right bottom, $color-l-yellow, $color-d-yellow), url(../img/nat-5.jpg);
+		}
+
+		&-2{
+			background-image: linear-gradient(to right bottom, $color-l-green, $color-d-green), url(../img/nat-6.jpg);
+		}
+
+		&-3{
+			background-image: linear-gradient(to right bottom, $color-l-blue, $color-d-blue), url(../img/nat-7.jpg);
+		}
+	}
+
+	&__heading{
+		font-size: 2.5rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $color-l-white;
+		position: absolute;
+		top: 15rem;
+		right: 2rem;
+		text-align: right;
+		width: 64%;
+	}
+
+	&__heading-span{
+		padding: 1rem 1.5rem;
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+
+		&-1{
+			background-image: linear-gradient(to right bottom, rgba($color-l-yellow, 0.85), rgba($color-d-yellow, 0.85));
+		}
+
+		&-2{
+			background-image: linear-gradient(to right bottom, rgba($color-l-green, 0.85), rgba($color-d-green, 0.85));
+		}
+
+		&-3{
+			background-image: linear-gradient(to right bottom, rgba($color-l-blue, 0.85), rgba($color-d-blue, 0.85));
+		}
+	}
+
+	&__details{
+		padding: 3rem;
+
+		&-ul{
+			list-style: none;
+			width: 80%;
+			margin: 0 auto;
+
+			li{
+				text-align: center;
+				font-size: 1.5rem;
+				padding: 1rem;
+				
+				&:not(:last-child){
+					border-bottom: 0.1rem solid $color-l2-white;
+				}
+			}
+		}
+	}
+
+	&__cta{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__price-box{
+		text-align: center;
+		color: $color-l-white;
+	}
+
+	&__price-only{
+		font-size: 1.5rem;
+		text-transform: uppercase;
+	}
+
+	&__price-value{
+		font-size: 6rem;
+		font-weight: 300;
+		margin-bottom: 8rem;
 	}
 }
