@@ -188,6 +188,21 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   transform: translateY(0); }
 
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.15;
+  overflow: hidden; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
+
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
@@ -205,7 +220,7 @@ body {
     backface-visibility: hidden;
     overflow: hidden; }
     .card__side--front {
-      background-color: #ededed; }
+      background-color: #ffffff; }
     .card__side--back {
       transform: rotateY(180deg); }
       .card__side--back-1 {
@@ -326,6 +341,53 @@ body {
     transform: translateY(-3rem) scale(1.1);
     box-shadow: 0 3rem 8rem rgba(0, 0, 0, 0.15); }
 
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg);
+  background-color: #ffffffc4; }
+  .story > * {
+    transform: skewX(12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    position: relative; }
+  .story__image {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.2);
+    backface-visibility: hidden;
+    transition: all 0.2s; }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    color: #ededed;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__image {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(0.3rem) brightness(90%); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -393,3 +455,7 @@ body {
   padding: 25rem 0 15rem 0;
   margin-top: -10vh;
   background-color: #f7f7f7; }
+
+.section-story {
+  padding: 15rem 0;
+  position: relative; }
